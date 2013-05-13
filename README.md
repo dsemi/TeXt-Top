@@ -1,5 +1,5 @@
-NOT CURRENTLY FUNCTIONAL 
-========================
+## NOT CURRENTLY FUNCTIONAL
+Also check out working (partially) [Google Voice Edition](https://github.com/seminara/TeXt-Top_GoogleVoice)
 <pre>
 ///////////////////////////////////////////////////////////
  /////////        //     //       /////////                
