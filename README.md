@@ -14,15 +14,12 @@ NOT CURRENTLY FUNCTIONAL
                                                     // 
 </pre>
 
-This is a read me file for the project: TeXt Top.
-
-Group Info:   
+This is a read me file for the project: TeXt Top.   
 
 Thank you for downloading TeXt-Top, a program that allows you to text commands to your computer!
 
-==================
-Dependencies:
-==================
+
+### Dependencies:
 Linux:
 - Python 2
 - python-boto
@@ -36,14 +33,10 @@ Windows:
 - pywin32 (32-bit version)
 - Python VideoCapture
 
-===================
-Starting the program:
-===================
+### Starting the program:
 To run TeXt-Top, simply double-click on TeXt-Top.exe (if you've downloaded the Windows build) or run the Python script TeXt-Top.py (if you've downloaded the Linux build).
 
-======================
-Navigating the interface:
-======================
+### Navigating the interface:
 After running TeXt-Top, you'll be confronted with a login screen which requires you to enter a username and password.  If you're new to using the program, after typing in your credentials, click the 'Register' button and you'll be asked to provide your phone number. Once you've registered, you can then press the 'Login' button to be able to start texting commands to your computer. You'll notice checkboxes for 'Hide window on login' and 'Auto-login' at the bottom of the screen, which become active after logging in. 
 *Note: After hiding the window, there is no way to close the program except by going into the task manager and ending the process.  If both hide window and auto-login are selected, there will be no way to access TeXt-Top's menu options.  A simple way to fix this is to delete the preferences.txt file in the folder where TeXt-Top is located, which will undo these preferences.
 
@@ -59,13 +52,10 @@ with a navigation menu where you can select Python scripts and either Batch file
 
 'Quit' - Closes the program.
 
-==================
-Texting a command:
-==================
+### Texting a command:
 To have a command activate on your computer, text the number that is displayed on the main menu once you log in and type the name of the command you would like to execute. Some commands take arguments in addition to their name. When texting a command, you put the name of the command first and then the arguments separated by commas. For instance, 'open file' takes one argument which is the name of the file you would like to open. So, when using that command, you would text 'open file,example.txt'.  You will notice that a number of default commands come with TeXt-Top. Their names and instructions are as follows:
 
-Windows:
-----------------
+#### Windows:
 1. batman - Description: Changes your desktop background to an ascii batman image, Arguments: None 
 2. capture - Description: Takes a picture using your webcam and sends it to a recipient, Arguments: The email address of the recipient
 3. download - Description: Downloads the file specified, Arguments: The url of the file you wish to download
@@ -76,8 +66,7 @@ Windows:
 8. send mail - Description: Sends an email remotely, Arguments: The recipient's email address, the title of your email, the file you would like to attach, the subject of the email, the name of the sender
 9. shutdown - Description: Shuts down your computer, Arguments: None
 
-Linux:
------------
+#### Linux:
 1. download - Description: Downloads the file specified, Arguments: The url of the file you wish to download
 2. find file - Description: Texts you back the directory of the file you specify, Arguments: The name of the file you would like to search for
 3. get ip - Description: Texts you back the IP address of your computer, Arguments: None
@@ -87,9 +76,7 @@ Linux:
 7. shutdown - Description: Shuts down your computer, Arguments: None
 8. unlock - Description: Unlocks your locked computer, Arguments: None
 
-===================
-Creating a command:
-===================
+### Creating a command:
 You can write your own commands to be used by TeXt-Top in the form of either a Python script, Shell script (Linux-only), or Batch script (Windows-only). When writing your script, here are some general guidelines to keep in mind:
 
 - The name of the script (minus the extension) will be the command name that you text.
