@@ -30,6 +30,7 @@ __credits__ = {'TeXt-Top Team': [
 import os
 import glob
 import time
+#import threading
 from subprocess import Popen,PIPE
 from googlevoice import Voice
 
@@ -44,8 +45,12 @@ class App:
         self.voice = Voice()
         self.voice.login()
         self.extensions = {
+            # File extension to search for when validating command
             '.sh': {
+                # Program name to prepend to command list when executing
+                # For Linux
                 'posix': None,
+                # For Windows
                 'nt': None
                 },
             '.py': {
@@ -56,6 +61,7 @@ class App:
                 'posix': None,
                 'nt': None
                 }
+                # Add others as needed
             }
         # Either type in number here or set environment variable
         self.user_phone = os.environ.get('PHONE_NUMBER')
