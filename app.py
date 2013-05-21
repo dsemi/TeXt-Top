@@ -28,6 +28,7 @@ __credits__ = {'TeXt-Top Team': [
     'Dan Seminara']}
 
 import os
+import sys
 import glob
 import time
 #import threading
@@ -49,23 +50,23 @@ class App:
             '.sh': {
                 # Program name to prepend to command list when executing
                 # For Linux
-                'posix': None,
+                'linux2': None,
                 # For Windows
-                'nt': None
+                'win32': None
                 },
             '.py': {
-                'posix': 'python2',
-                'nt': 'python'
+                'linux2': 'python2',
+                'win32': 'python'
                 },
             '.bat': {
-                'posix': None,
-                'nt': None
+                'linux2': None,
+                'win32': None
                 }
                 # Add others as needed
             }
         # Either type in number here or set environment variable
         self.user_phone = os.environ.get('PHONE_NUMBER')
-        self.command_dir = ('commands/linux', 'commands\\windows')[os.name == 'nt']
+        self.command_dir = ('commands/linux', 'commands\\windows')[sys.platform == 'win32']
 
 
     def start_polling(self):
@@ -112,8 +113,8 @@ class App:
                     if not args:
                         message.delete()
                         continue
-                    if self.extensions[os.path.splitext(args[0])[1]][os.name]:
-                        args.insert(0,self.extensions[os.path.splitext(args[0])[1]][os.name])
+                    if self.extensions[os.path.splitext(args[0])[1]][sys.platform]:
+                        args.insert(0,self.extensions[os.path.splitext(args[0])[1]][sys.platform])
                     # Debugging
                     print args
                     p = Popen(args, stdout=PIPE)
