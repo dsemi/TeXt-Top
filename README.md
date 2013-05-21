@@ -24,6 +24,11 @@ Linux:
 - python2-pygooglevoice
 - wget
 
+Windows:
+- Python 2
+- python2-pygooglevoice
+
+
 #### Important:
 When installing pygooglevoice, be sure to edit the ~/.gvoice file so it contains your Gmail address, password (I know, looking for fix), and Google Voice number (10 digits no dashes).  If you decide you want to leave the password blank, you will be prompted upon launching the program.
 
