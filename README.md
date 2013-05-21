@@ -24,6 +24,13 @@ Linux:
 - python2-pygooglevoice
 - wget
 
+Windows:  
+(May have to edit settings.py and change LOGIN to 'https://accounts.google.com/ServiceLogin?service=code&ltmpl=phosting&continue=http%3A%2F%2Fcode.google.com%2Fp%2Fpygooglevoice%2Fissues%2Fdetail%3Fid%3D64&followup=http%3A%2F%2Fcode.google.com%2Fp%2Fpygooglevoice%2Fissues%2Fdetail%3Fid%3D64'
+see [here](https://code.google.com/p/pygooglevoice/issues/detail?id=64))
+- Python 2
+- python2-pygooglevoice
+
+
 #### Important:
 When installing pygooglevoice, be sure to edit the ~/.gvoice file so it contains your Gmail address, password (I know, looking for fix), and Google Voice number (10 digits no dashes).  If you decide you want to leave the password blank, you will be prompted upon launching the program.
 
@@ -38,6 +45,7 @@ To run TeXt-Top, run app.py (keep the commands folder as well)
 To have a command activate on your computer, text the number you have chosen with the filename (no extension) you want to run. Some commands take arguments in addition to their name. These arguments must be comma separated. There are a few default commands, and you can add your own as you wish.
 
 #### Included commands:
+##### Linux:
 1. download - Description: Downloads the file specified, Arguments: The url of the file you wish to download
 2. find file - Description: Texts you back the directory of the file you specify, Arguments: The name of the file you would like to search for
 3. get ip - Description: Texts you back the IP address of your computer, Arguments: None
@@ -45,6 +53,17 @@ To have a command activate on your computer, text the number you have chosen wit
 5. restart - Description: Restarts your computer, Arguments: None
 6. shutdown - Description: Shuts down your computer, Arguments: None
 7. unlock - Description: Unlocks your locked computer, Arguments: None
+
+##### Windows:
+1. batman
+2. capture
+3. download
+4. get dir
+5. get ip
+6. lock screen
+7. restart
+8. send mail
+9. shutdown
 
 
 ### Creating a command:
