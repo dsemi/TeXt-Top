@@ -135,6 +135,7 @@ class App:
                 raise
             finally:
                 # Be careful changing, don't want a captcha
+                # Consider using thread timer so sleeping doesn't hog thread
                 time.sleep(20)
 
 
