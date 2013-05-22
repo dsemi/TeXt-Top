@@ -25,7 +25,7 @@ Linux:
 - wget
 
 Windows:  
-(May have to edit settings.py and change LOGIN to 'https://accounts.google.com/ServiceLogin?service=code&ltmpl=phosting&continue=http%3A%2F%2Fcode.google.com%2Fp%2Fpygooglevoice%2Fissues%2Fdetail%3Fid%3D64&followup=http%3A%2F%2Fcode.google.com%2Fp%2Fpygooglevoice%2Fissues%2Fdetail%3Fid%3D64'
+(May have to edit C:\Python27\site-packages\googlevoice\settings.py and change LOGIN to 'https://accounts.google.com/ServiceLogin?service=code&ltmpl=phosting&continue=http%3A%2F%2Fcode.google.com%2Fp%2Fpygooglevoice%2Fissues%2Fdetail%3Fid%3D64&followup=http%3A%2F%2Fcode.google.com%2Fp%2Fpygooglevoice%2Fissues%2Fdetail%3Fid%3D64'
 see [here](https://code.google.com/p/pygooglevoice/issues/detail?id=64))
 - Python 2
 - python2-pygooglevoice
