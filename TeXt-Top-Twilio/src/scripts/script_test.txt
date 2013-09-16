@@ -1,0 +1,62 @@
+import os, sys
+
+# Current list of scripts.
+# Not meant to be runnable, just as reference.
+# USED FOR WINDOWS ONLY
+
+# Returns the file path of the given file, user can specify the starting directory (default = root)
+def get_dir(user_input, start_dir='\\'):
+	user_input = '"' + sys.argv[1] + '"'
+	start_dir = sys.argv[2] 
+	command = 'dir ' + user_input + ' /s /b'
+	os.chdir(start_dir)
+	wdir = os.popen(command).read()
+	wdir = wdir[0:(len(wdir)-(len(user_input)))]
+	return (wdir)
+
+# Opens the given file
+def open_file(user_input=''):
+	user_input = '"' + sys.argv[1] + '"'
+	os.chdir('\\')
+	command = 'dir ' + user_input + ' /s /b'
+	wdir = os.popen(command).read()
+	wdir = wdir[0:(len(wdir)-(len(user_input)))]
+	os.chdir(wdir)
+	os.system(user_input)
+
+# Shuts the computer down, timer set to 0 if not given
+def shutdown(seconds=0):
+	if seconds > 0:
+		os.system("shutdown /s")
+	else:
+		os.system("shutdown /s /t " + seconds)
+
+# Restarts the system
+def restart():
+	os.system("shutdown /r")
+
+# Returns the user's IPv4 address
+def get_ip():
+	addr = os.popen('ipconfig').read()
+	num1 = addr.find('IPv4')
+	num2 = addr.find('Subnet Mask')
+	ip = addr[(num1 + 36):(num2 - 4)]
+	return ip
+
+def read_file(user_input=''):
+	user_input = '"' + user_input + '"'
+	os.chdir('\\')
+	command = 'dir ' + user_input + ' /s /b'
+	wdir = os.popen(command).read()
+	wdir = wdir[0:(len(wdir)-(len(user_input)))]
+	os.chdir(wdir)
+	fr = open(user_input[1:len(user_input) - 1])
+
+	while 1:
+		line = fr.readline()
+		if not line:
+			break
+		pass
+
+def lock_computer():
+	os.system('rundll32.exe user32.dll, LockWorkStation')
