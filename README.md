@@ -78,12 +78,13 @@ Have fun!
 
 
 
-Twilio:
+=================
+## Twilio:
+
 Thank you for downloading TeXt-Top, a program that allows you to text commands to your computer!
 
-==================
-Dependencies:
-==================
+### Dependencies:
+
 Linux:
 - Python 2
 - python-boto
